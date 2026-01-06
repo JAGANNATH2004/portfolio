@@ -2,7 +2,6 @@ import React, { useRef, useState } from 'react';
 import { Send, Linkedin } from 'lucide-react';
 import { useInView } from '../hooks/useInView';
 import emailjs from '@emailjs/browser';
-import { submitContactForm } from '../lib/analytics';
 
 const Contact: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -66,20 +65,12 @@ const Contact: React.FC = () => {
       setSubmitError('');
 
       try {
-        await Promise.all([
-          emailjs.sendForm(
-            'service_f0q35ho',
-            'template_8sodkat',
-            formRef.current!,
-            'r7JsQ5d9INy3kY-ng'
-          ),
-          submitContactForm(
-            formData.name,
-            formData.email,
-            'Contact Form Submission',
-            formData.message
-          ),
-        ]);
+        await emailjs.sendForm(
+          'service_f0q35ho',
+          'template_8sodkat',
+          formRef.current!,
+          'r7JsQ5d9INy3kY-ng'
+        );
 
         setSubmitSuccess(true);
         setFormData({ name: '', email: '', message: '' });

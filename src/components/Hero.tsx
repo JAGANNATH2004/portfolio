@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { ChevronDown, Github, Linkedin, Mail, Download } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { trackResumeDownload } from '../lib/analytics';
 
 const Hero: React.FC = () => {
   useEffect(() => {
@@ -15,15 +14,13 @@ const Hero: React.FC = () => {
     }
   };
 
-  const handleDownloadResume = async () => {
+  const handleDownloadResume = () => {
     const link = document.createElement('a');
     link.href = '/profile.pdf';
     link.download = 'Jagannath_Vungarala_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-
-    await trackResumeDownload();
   };
 
   return (
