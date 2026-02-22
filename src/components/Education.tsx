@@ -13,7 +13,7 @@ const Education: React.FC = () => {
       institution: "S.R.M University, Chennai",
       duration: "2025 - 2027",
       icon: <GraduationCap className="w-6 h-6" />,
-      details: "Specializing in Computer Science with Generative AI. CGPA : 9.17"
+      details: "Specializing in Computer Science with Generative AI.              CGPA : 9.17"
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ const Education: React.FC = () => {
       institution: "Presidency University, Bengaluru",
       duration: "2022 - 2025",
       icon: <GraduationCap className="w-6 h-6" />,
-      details: "Specializing in Computer Science.     CGPA : 7.63"
+      details: "Specializing in Computer Science.              CGPA : 7.63"
     },
     {
       id: 3,
@@ -29,7 +29,7 @@ const Education: React.FC = () => {
       institution: "Accord School",
       duration: "2020 - 2022",
       icon: <School className="w-6 h-6" />,
-      details: "Science stream(PCB). Percentage :     71.33%"
+      details: "Science stream(PCB).              Percentage : 71.33%"
     },
     {
       id: 4,
@@ -37,7 +37,7 @@ const Education: React.FC = () => {
       institution: "Accord School",
       duration: "2016 - 2020",
       icon: <BookOpen className="w-6 h-6" />,
-      details: "Grades 7th to 10th. Percentage : 65%"
+      details: "Grades 7th to 10th.              Percentage : 65%"
     },
     {
       id: 5,
