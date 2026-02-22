@@ -90,9 +90,9 @@ const Hero: React.FC = () => {
             >
               <Github className="w-8 h-8" />
             </a>
-            <a 
-              href="https://www.linkedin.com/in/jagannath-vungarala-437345250/" 
-              target="_blank" 
+            <a
+              href="https://www.linkedin.com/in/jagannath-vungarala"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-blue-400 transition-all duration-300 transform hover:scale-110 neon-glow p-3 rounded-full glass"
             >
