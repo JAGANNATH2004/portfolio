@@ -47,11 +47,10 @@ const Hero: React.FC = () => {
             className="flex flex-col items-center justify-center gap-8 mb-6"
           >
             <div className="relative group">
-              <img 
-                src="/18647.webp" 
-                alt="Jagannath Vungarala" 
-                className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover object-top border-4 border-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 p-1 neon-glow transition-all duration-300 group-hover:scale-105"
-                style={{ objectPosition: '50% 30%' }}
+              <img
+                src="/1771758006411.png"
+                alt="Jagannath Vungarala"
+                className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover object-center border-4 border-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 p-1 neon-glow transition-all duration-300 group-hover:scale-105"
               />
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-cyan-500/10 group-hover:from-blue-500/20 group-hover:via-purple-500/20 group-hover:to-cyan-500/20 transition-all duration-300"></div>
               <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-cyan-500/20 blur-lg opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
