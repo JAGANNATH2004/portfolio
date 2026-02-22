@@ -65,7 +65,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-xl md:text-2xl font-medium mb-6 text-gray-300"
           >
-            Aspiring Data Scientist | AI Enthusiast
+            AI & Data Science Enthusiast
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -73,7 +73,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-lg text-gray-400 mb-8"
           >
-            Exploring the realms of Data Science to drive innovation.
+            Exploring intelligent systems and transforming ideas into AI-powered solutions.
           </motion.p>
           
           <motion.div 
