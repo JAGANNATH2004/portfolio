@@ -98,7 +98,7 @@ const Hero: React.FC = () => {
             >
               <Linkedin className="w-8 h-8" />
             </a>
-            <a 
+            <a
               href="mailto:vungaralajagannath04@gmail.com"
               className="text-gray-300 hover:text-blue-400 transition-all duration-300 transform hover:scale-110 neon-glow p-3 rounded-full glass"
             >
