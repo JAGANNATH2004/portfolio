@@ -10,7 +10,8 @@ const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
+    botField: ''
   });
   
   const [errors, setErrors] = useState({
@@ -87,46 +88,57 @@ const Contact: React.FC = () => {
 
     if (cooldown > 0) return;
 
+    // Honeypot bot protection: silently drop submission if bot field is filled
+    if (formData.botField) {
+      setSubmitSuccess(true);
+      setFormData({ name: '', email: '', message: '', botField: '' });
+      return;
+    }
+
     if (validateForm()) {
       setIsSubmitting(true);
       setSubmitError('');
 
       try {
-        const apiUrl = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`;
-        const response = await fetch(apiUrl, {
+        const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+
+        if (!accessKey) {
+          throw new Error('Web3Forms access key is not configured');
+        }
+
+        const response = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+            Accept: 'application/json',
           },
           body: JSON.stringify({
+            access_key: accessKey,
             name: formData.name.trim(),
             email: formData.email.trim(),
             message: formData.message.trim(),
+            subject: `Portfolio Contact from ${formData.name.trim()}`,
+            from_name: formData.name.trim(),
+            botcheck: formData.botField,
           }),
         });
 
         const data = await response.json();
 
-        if (!response.ok) {
-          if (response.status === 429) {
-            setSubmitError(data.error || 'Too many messages. Please try again later.');
-          } else {
-            setSubmitError(data.error || 'Failed to send message. Please try again later.');
-          }
-          startCooldown();
-          return;
+        if (!response.ok || !data.success) {
+          throw new Error(data.message || 'Failed to send message');
         }
 
         setSubmitSuccess(true);
-        setFormData({ name: '', email: '', message: '' });
+        setFormData({ name: '', email: '', message: '', botField: '' });
         startCooldown();
 
         setTimeout(() => {
           setSubmitSuccess(false);
         }, 5000);
       } catch (error) {
-        setSubmitError('Failed to send message. Please try again later.');
+        console.error('Failed to send message:', error);
+        setSubmitError('Failed to send message. Please check the access key or try again later.');
         startCooldown();
       } finally {
         setIsSubmitting(false);
@@ -182,6 +194,19 @@ const Contact: React.FC = () => {
             
             <div>
               <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
+                {/* Honeypot field for bot protection (invisible to real users) */}
+                <div className="hidden" aria-hidden="true" style={{ display: 'none' }}>
+                  <label htmlFor="botField">Do not fill this field</label>
+                  <input
+                    type="text"
+                    id="botField"
+                    name="botField"
+                    value={formData.botField}
+                    onChange={handleChange}
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
+                </div>
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
                     Name
@@ -246,8 +271,8 @@ const Contact: React.FC = () => {
                 >
                   {isSubmitting ? (
                     <>
-                      <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white\" xmlns="http://www.w3.org/2000/svg\" fill="none\" viewBox="0 0 24 24">
-                        <circle className="opacity-25\" cx="12\" cy="12\" r="10\" stroke="currentColor\" strokeWidth="4"></circle>
+                      <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                       </svg>
                       Sending...
