@@ -13,7 +13,7 @@ const Projects: React.FC = () => {
       tags: ["Machine Learning", "Web Development", "API Management", "Supabase"],
       link: "https://github.com/JAGANNATH2004/Skin",
       gradient: "from-emerald-500 to-cyan-600",
-      shortTitle: "SkinIntel AI"
+      shortTitle: "SkinCare AI"
     },
     {
       title: "AI based Job Scraper",
