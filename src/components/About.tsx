@@ -24,9 +24,7 @@ const About: React.FC = () => {
             isInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}>
             <p className="text-lg text-gray-300 leading-relaxed">
-              As a Master's  in Computer Applications student in S.R.M University, I am deeply passionate about exploring the 
-              intersections of Data Science and Artificial Intelligence. My academic journey has been driven by a 
-              curiosity to understand how these technologies can be leveraged to create meaningful impact.
+               
             </p>
             
             <p className="text-lg text-gray-300 leading-relaxed">
