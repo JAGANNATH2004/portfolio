@@ -56,6 +56,12 @@ const Footer: React.FC = () => {
                 Certifications
               </button>
               <button 
+                onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
+                className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
+              >
+                Experience
+              </button>
+              <button 
                 onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
                 className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
               >

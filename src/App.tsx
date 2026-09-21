@@ -10,6 +10,7 @@ import SEO from './components/SEO';
 const About = React.lazy(() => import('./components/About'));
 const Skills = React.lazy(() => import('./components/Skills'));
 const Certifications = React.lazy(() => import('./components/Certifications'));
+const Experience = React.lazy(() => import('./components/Experience'));
 const Projects = React.lazy(() => import('./components/Projects'));
 const Research = React.lazy(() => import('./components/Research'));
 const Education = React.lazy(() => import('./components/Education'));
@@ -29,6 +30,7 @@ function App() {
             <About />
             <Skills />
             <Certifications />
+            <Experience />
             <Projects />
             <Research />
             <Education />
