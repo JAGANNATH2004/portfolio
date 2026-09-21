@@ -8,6 +8,14 @@ const Projects: React.FC = () => {
 
   const projects = [
     {
+      title: "AI based Job Scraper",
+      description: "Developed an AI-powered job aggregation system that automatically collects and filters fresher-level opportunities in Data Science, Machine Learning, and AI from platforms like LinkedIn and Naukri. Integrated LLM-based filtering to identify relevant roles posted within the last 24 hours based on skills and experience criteria. Built a robust pipeline using web scraping, SQLite database storage, and deduplication to ensure accurate and up-to-date listings. Implemented a Telegram bot that delivers curated top job recommendations daily, improving accessibility and saving manual search time.",
+      tags: ["Ollama", "Jobs", "Agent"],
+      link: "https://github.com/JAGANNATH2004/AI-JobScout",
+      gradient: "from-red-500 to-orange-600",
+      shortTitle: "AI-JobScout"
+    },
+    {
       title: "Thero: Personal Mental Health Chat Bot",
       description: "Developed a chatbot providing emotional support, wellness tips, and personalized music recommendations using the Gemini API. Thero serves as a companion for users seeking mental health support and guidance in their daily lives.",
       tags: ["Gemini API", "Mental Health", "Chatbot"],

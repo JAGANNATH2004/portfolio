@@ -30,17 +30,17 @@ const Hero: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-cyan-900/20"></div>
         </div>
       </div>
-
+      
       {/* Animated background particles */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
         <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-bounce"></div>
         <div className="absolute top-1/2 left-3/4 w-1.5 h-1.5 bg-cyan-400 rounded-full animate-ping"></div>
       </div>
-
+      
       <div className="container mx-auto px-4 py-20 z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <motion.div
+          <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -59,15 +59,15 @@ const Hero: React.FC = () => {
               Jagannath Vungarala
             </h1>
           </motion.div>
-          <motion.h2
+          <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-xl md:text-2xl font-medium mb-6 text-gray-300"
           >
-            AI & Backend Systems Enthusiast
+            AI & Data Science Enthusiast
           </motion.h2>
-          <motion.p
+          <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -75,24 +75,24 @@ const Hero: React.FC = () => {
           >
             Exploring intelligent systems and transforming ideas into AI-powered solutions.
           </motion.p>
-          <motion.p
+           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-lg text-gray-400 mb-8"
           >
-            AI Developer with strong Python and LLM-based application experience
+           AI Developer with strong Python and LLM-based application experience
           </motion.p>
-
-          <motion.div
+          
+          <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.9 }}
             className="flex justify-center space-x-6 mb-12"
           >
-            <a
-              href="https://github.com/JAGANNATH2004"
-              target="_blank"
+            <a 
+              href="https://github.com/JAGANNATH2004" 
+              target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-blue-400 transition-all duration-300 transform hover:scale-110 neon-glow p-3 rounded-full glass"
             >
@@ -141,14 +141,14 @@ const Hero: React.FC = () => {
           >
             <div className="text-center">
               <div className="text-sm text-gray-500">Location</div>
-              <div className="text-gray-300">Hyderabad, INDIA</div>
+              <div className="text-gray-300">Chennai, INDIA</div>
             </div>
             <div className="hidden md:block h-10 w-px bg-gray-600"></div>
 
           </motion.div>
         </div>
       </div>
-      <motion.button
+      <motion.button 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1.5 }}
