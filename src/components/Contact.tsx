@@ -100,7 +100,7 @@ const Contact: React.FC = () => {
       setSubmitError('');
 
       try {
-        const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+        const accessKey = import.meta.env.VITE_WEB3FORMS || import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
 
         if (!accessKey) {
           throw new Error('Web3Forms access key is not configured');
