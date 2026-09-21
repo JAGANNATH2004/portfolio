@@ -8,6 +8,14 @@ const Projects: React.FC = () => {
 
   const projects = [
     {
+      title: "AI Based Skin Intelligence & Personalized Skincare",
+      description: "Built an AI-powered skincare intelligence platform that analyzes users' skin profiles, lifestyle habits, sleep patterns, environmental exposure, and skin concerns to generate personalized skincare routines. The platform provides AI-driven skin assessments, ingredient and product analysis, routine planning, personalized recommendations, and skin progress tracking, supporting skincare consumers, dermatology clinics, wellness platforms, beauty brands, and skincare consultants.",
+      tags: ["Machine Learning", "Web Development", "API Management", "Supabase"],
+      link: "https://github.com/JAGANNATH2004/Skin",
+      gradient: "from-emerald-500 to-cyan-600",
+      shortTitle: "SkinIntel AI"
+    },
+    {
       title: "AI based Job Scraper",
       description: "Developed an AI-powered job aggregation system that automatically collects and filters fresher-level opportunities in Data Science, Machine Learning, and AI from platforms like LinkedIn and Naukri. Integrated LLM-based filtering to identify relevant roles posted within the last 24 hours based on skills and experience criteria. Built a robust pipeline using web scraping, SQLite database storage, and deduplication to ensure accurate and up-to-date listings. Implemented a Telegram bot that delivers curated top job recommendations daily, improving accessibility and saving manual search time.",
       tags: ["Ollama", "Jobs", "Agent"],
@@ -34,7 +42,7 @@ const Projects: React.FC = () => {
     {
       title: "YouTube Video Downloader",
       description: "Developed a Python-based application enabling users to download YouTube videos directly to their devices. Utilized the Pytube library for video retrieval and Tkinter for a user-friendly GUI. The tool supports downloading in various resolutions and formats, enhancing offline accessibility. This project demonstrates proficiency in Python scripting and GUI development.",
-      tags: ["YouTube",,"Python"],
+      tags: ["YouTube", "Python"],
       link: "https://www.linkedin.com/in/jagannath-vungarala-437345250/",
       gradient: "from-yellow-500 to-pink-600",
       shortTitle: "Downloader"
@@ -102,7 +110,7 @@ const Projects: React.FC = () => {
                         rel="noopener noreferrer"
                         className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors"
                       >
-                        <span className="mr-2">{project.title === "Thero: Personal Mental Health Chat Bot" ? "View on GitHub" : "View on LinkedIn"}</span>
+                        <span className="mr-2">{project.link.includes("github.com") ? "View on GitHub" : "View on LinkedIn"}</span>
                         <ExternalLink className="w-4 h-4" />
                       </a>
                     </div>
