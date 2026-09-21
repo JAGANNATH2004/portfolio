@@ -12,8 +12,7 @@ const Experience: React.FC = () => {
       company: "Infosys Springboard",
       duration: "July 2026 – September 2026",
       description:
-        "Developed an AI-powered skincare intelligence platform that analyzes skin profiles, lifestyle, sleep, environmental exposure, and skin concerns to generate personalized skincare routines. Features include AI-based skin assessment, ingredient compatibility analysis, product recommendations, routine planning, and progress tracking, enabling data-driven and personalized skincare management.
-",
+        "Developed an AI-powered skincare intelligence platform that analyzes skin profiles, lifestyle, sleep, environmental exposure, and skin concerns to generate personalized skincare routines. Features include AI-based skin assessment, ingredient compatibility analysis, product recommendations, routine planning, and progress tracking, enabling data-driven and personalized skincare management.",
       gradient: "from-blue-500 to-cyan-600",
     },
   ];
