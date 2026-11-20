@@ -37,7 +37,7 @@ const Education: React.FC = () => {
       institution: "Accord School",
       duration: "2016 - 2020",
       icon: <BookOpen className="w-6 h-6" />,
-      details: "Grades 7th to 10th.              Percentage : 65%"
+      details: "Grades 7th to 10th.              Percentage : 65.6%"
     },
     {
       id: 5,
