@@ -16,8 +16,8 @@ const Hero: React.FC = () => {
 
   const handleDownloadResume = () => {
     const link = document.createElement('a');
-    link.href = '/Jagannath_AI_Engineer.pdf';
-    link.download = 'Jagannath_AI_Engineer.pdf';
+    link.href = '/Jagannath_Resume.pdf';
+    link.download = 'Jagannath_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
