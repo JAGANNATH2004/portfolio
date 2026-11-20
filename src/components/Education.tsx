@@ -13,7 +13,7 @@ const Education: React.FC = () => {
       institution: "S.R.M University, Chennai",
       duration: "2025 - 2027",
       icon: <GraduationCap className="w-6 h-6" />,
-      details: "Specializing in Computer Science with Generative AI.              CGPA : 9.17"
+      details: "Specializing in Computer Science with Generative AI.              CGPA : 9.40"
     },
     {
       id: 2,
